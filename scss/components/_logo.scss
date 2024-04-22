@@ -1,0 +1,23 @@
+.logo {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.6;
+  color: $secondary-color;
+
+  &__link {
+    max-width: 228px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed #fff;
+      outline-offset: 6px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+}

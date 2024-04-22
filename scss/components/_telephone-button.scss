@@ -1,0 +1,37 @@
+.telephone-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+
+  @media (min-width: $bp-desktop) {
+    display: none;
+  }
+
+  &__button {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed #fff;
+      outline-offset: 6px;
+    }
+  }
+
+  &__svg {
+    width: 100%;
+    fill: $secondary-color;
+
+    &:active {
+      fill: red;
+    }
+  }
+}

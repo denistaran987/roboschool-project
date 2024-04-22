@@ -1,0 +1,98 @@
+.header {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+
+  &__container {
+    padding: 30px 100px 0;
+
+    @media (max-width: $bp-desktop) {
+      padding: 10px 10px 0;
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__item:last-child {
+    @media (max-width: $bp-desktop) {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 10px;
+
+    @media (max-width: $bp-desktop) {
+      display: none;
+    }
+  }
+
+  &__nav-list-item {
+    font-size: 20px;
+    line-height: 1.6;
+    color: $secondary-color;
+  }
+
+  &__nav-list-link {
+    padding: 6px 8px;
+
+    &:focus {
+      outline: none;
+      color: lightcoral;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed lightcoral;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-radius: 10px;
+        background-color: lightcoral;
+      }
+    }
+  }
+
+  &__tel {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.6;
+    color: $secondary-color;
+    transition: color 0.3s ease-in-out;
+    padding: 6px 8px;
+
+    &:focus {
+      outline: none;
+      color: lightcoral;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed lightcoral;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-radius: 10px;
+        background-color: lightcoral;
+      }
+    }
+
+    @media (max-width: $bp-desktop) {
+      display: none;
+    }
+  }
+}
