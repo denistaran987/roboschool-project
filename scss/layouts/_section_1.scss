@@ -4,11 +4,9 @@
   background-color: $third-color;
   margin-bottom: 60px;
 
-  // @media (max-width: $bp-desktop) {
-  //   background-image: url("/images/herobgmobile.png");
-  //   background-repeat: no-repeat;
-  //   background-position: bottom right;
-  // }
+  @media (max-width: $bp-tablet) {
+    margin-bottom: 30px;
+  }
 
   &__items {
     display: flex;
@@ -86,7 +84,7 @@
     }
 
     &:focus-visible {
-      outline: 2px dashed #fff;
+      outline: 2px dashed $secondary-color;
       outline-offset: 6px;
     }
 
@@ -101,7 +99,7 @@
       font-size: 16px;
       line-height: 1.6;
       text-align: center;
-      color: #fff;
+      color: $secondary-color;
     }
   }
 

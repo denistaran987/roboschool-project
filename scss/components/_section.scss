@@ -1,7 +1,21 @@
 .section {
   padding: 60px 0;
 
+  @media (max-width: $bp-tablet) {
+    padding: 30px 0 0;
+  }
+
   &:first-child {
     padding: 160px 0 0;
+
+    @media (max-width: $bp-desktop) {
+      padding: 140px 0 0;
+    }
+    @media (max-width: $bp-tablet) {
+      padding: 120px 0 0;
+    }
+    @media (max-width: $bp-mobile) {
+      padding: 100px 0 0;
+    }
   }
 }
