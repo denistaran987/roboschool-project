@@ -1,0 +1,18 @@
+.header-block {
+  width: 100%;
+  max-width: 682px;
+
+  &__title {
+    text-align: left;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 1.6;
+    color: $primary-color;
+
+    @media (max-width: $bp-tablet) {
+      font-size: 30px;
+      line-height: 1.4;
+      text-align: center;
+    }
+  }
+}
