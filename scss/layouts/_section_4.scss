@@ -1,0 +1,41 @@
+.coaches {
+  &__container {
+    display: grid;
+    gap: 60px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    overflow: hidden;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  &__button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+  }
+
+  &__lines,
+  &__lines-item {
+    border-radius: 40px;
+    width: 360px;
+    height: 5px;
+    background-color: rgba(20, 16, 36, 0.08);
+  }
+
+  &__lines-item {
+    display: block;
+    width: 260px;
+    background-color: $primary-color;
+  }
+}

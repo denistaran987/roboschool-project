@@ -1,8 +1,7 @@
 .info {
   &__text {
     font-size: 30px;
-    line-height: 1.6;
-    color: #141024;
+    color: $primary-color;
     max-width: 891px;
     margin-bottom: 60px;
 
@@ -36,7 +35,6 @@
   &__list-title {
     font-weight: 600;
     font-size: 70px;
-    line-height: 1.6;
     color: #d52027;
 
     @media (max-width: $bp-tablet) {
@@ -47,7 +45,6 @@
   &__list-text {
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.6;
     color: rgba(20, 16, 36, 0.7);
 
     @media (max-width: $bp-tablet) {

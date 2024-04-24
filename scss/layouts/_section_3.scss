@@ -29,7 +29,6 @@
   &__item-title {
     font-weight: 600;
     font-size: 24;
-    line-height: 1.6;
     color: $primary-color;
     margin-bottom: 20px;
 
@@ -47,7 +46,6 @@
 
   &__item-text {
     font-size: 18px;
-    line-height: 1.6;
     color: $third-color;
 
     @media (max-width: $bp-tablet) {
