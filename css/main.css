@@ -120,7 +120,8 @@ select {
           align-items: center;
   width: 44px;
   height: 44px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  -webkit-box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.08);
+          box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.08);
   border-radius: 10px;
 }
 @media (min-width: 1280px) {
@@ -190,6 +191,47 @@ select {
   color: #fff;
   background-color: #d52027;
   cursor: pointer;
+}
+
+.button-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.08);
+          box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.08);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.button-close:active {
+  scale: -0.95;
+}
+.button-close__line {
+  border: 2.11px solid #fff;
+  width: 17px;
+  rotate: 45deg;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.button-close__line:last-child {
+  rotate: -45deg;
+}
+@media (min-width: 1280px) {
+  .button-close {
+    display: none;
+  }
 }
 
 .carousel-button {
@@ -340,7 +382,8 @@ select {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  -webkit-box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.08);
+          box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.08);
   border-radius: 10px;
 }
 @media (min-width: 1280px) {
@@ -364,9 +407,6 @@ select {
 .telephone-box__svg {
   width: 100%;
   fill: #fff;
-}
-.telephone-box__svg:active {
-  fill: red;
 }
 
 .header {
@@ -408,7 +448,35 @@ select {
     gap: 10px;
   }
 }
+@media (max-width: 1280px) {
+  .header__nav {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #141024;
+    z-index: 50;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+    visibility: hidden;
+    -webkit-transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+  .header__nav--active {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    visibility: visible;
+  }
+}
 .header__nav-list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -424,12 +492,34 @@ select {
 }
 @media (max-width: 1280px) {
   .header__nav-list {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    row-gap: 20px;
+    width: 100%;
+    height: 100%;
   }
 }
 .header__nav-list-item {
   font-size: 20px;
   color: #fff;
+}
+@media (max-width: 1280px) {
+  .header__nav-list-item {
+    font-weight: 600;
+    font-size: 30px;
+    color: #fff;
+  }
 }
 .header__nav-list-link {
   padding: 6px 8px;
@@ -478,7 +568,6 @@ select {
   position: relative;
   z-index: 10;
   background-color: rgba(20, 16, 36, 0.7);
-  margin-bottom: 60px;
 }
 @media (max-width: 768px) {
   .hero {
@@ -615,6 +704,10 @@ select {
   .hero__image {
     translate: none;
   }
+}
+
+.section-hero {
+  margin-bottom: 60px;
 }
 
 .info__text {

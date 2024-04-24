@@ -2,7 +2,6 @@
   position: relative;
   z-index: 10;
   background-color: $third-color;
-  margin-bottom: 60px;
 
   @media (max-width: $bp-tablet) {
     margin-bottom: 30px;
@@ -126,4 +125,7 @@
       translate: none;
     }
   }
+}
+.section-hero {
+  margin-bottom: 60px;
 }
