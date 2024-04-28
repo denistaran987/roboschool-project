@@ -1,0 +1,124 @@
+.discount {
+  background-color: #d52027;
+
+  &__container {
+    padding: 87px 60px;
+
+    @media (max-width: $bp-tablet) {
+      padding: 60px 30px;
+    }
+    @media (max-width: $bp-mobile) {
+      padding: 40px 10px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 144px;
+    row-gap: 40px;
+
+    @media (max-width: $bp-tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    flex: 0 1 50%;
+
+    @media (max-width: $bp-tablet) {
+      &:first-child {
+        width: 100%;
+        text-align: center;
+      }
+
+      &:last-child {
+        width: 100%;
+      }
+    }
+  }
+
+  &__title {
+    width: 100%;
+    max-width: 355px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.3;
+    color: $secondary-color;
+    margin-bottom: 20px;
+
+    @media (max-width: $bp-tablet) {
+      font-size: 30px;
+      margin-bottom: 10px;
+      max-width: none;
+    }
+  }
+
+  &__period {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3;
+    color: $secondary-color;
+
+    @media (max-width: $bp-tablet) {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__button {
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    height: 64px;
+    background-color: $primary-color;
+    text-align: center;
+    color: $secondary-color;
+    cursor: pointer;
+    transition: background-image 0.5s;
+
+    @media (max-width: $bp-tablet) {
+      max-width: none;
+      font-size: 16px;
+      height: 60px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-image: linear-gradient(to right, red, pink);
+        color: $primary-color;
+      }
+    }
+
+    &:active {
+      transform: translateY(3px);
+    }
+  }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+
+  @media (max-width: $bp-tablet) {
+    max-width: none;
+  }
+
+  &__input {
+    height: 60px;
+    border-radius: 5px;
+    padding: 17px 20px;
+    margin-bottom: 10px;
+
+    &:focus {
+      outline-color: lightcoral;
+    }
+
+    &:focus::placeholder {
+      visibility: hidden;
+    }
+  }
+}

@@ -71,11 +71,9 @@
   }
 
   &__button {
-    @media (any-hover: hover) {
-      &:hover {
-        opacity: 0.8;
-      }
-    }
+    background-image: linear-gradient(to right, red, orange, pink);
+    background-size: 300% auto;
+    transition: background-position 0.7s;
 
     &:focus {
       outline: none;
@@ -84,6 +82,14 @@
     &:focus-visible {
       outline: 2px dashed $secondary-color;
       outline-offset: 6px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-position: right center;
+        transition: background-position 0.7s;
+        color: $primary-color;
+      }
     }
 
     @media (max-width: $bp-tablet) {

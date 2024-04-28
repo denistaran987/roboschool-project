@@ -1,0 +1,82 @@
+.footer {
+  background-color: $primary-color;
+  padding: 40px 100px;
+
+  @media (max-width: $bp-tablet) {
+    padding: 40px 90px 20px;
+  }
+
+  &__logo {
+    @media (max-width: $bp-tablet) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media (max-width: $bp-tablet) {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__item {
+    &:first-child {
+      @media (max-width: $bp-tablet) {
+        text-align: center;
+      }
+    }
+
+    &:last-child {
+      width: 100%;
+      max-width: 270px;
+    }
+
+    @media (max-width: $bp-tablet) {
+      max-width: none;
+      font-size: 16px;
+    }
+  }
+
+  &__copyright {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+
+    @media (max-width: $bp-tablet) {
+      font-size: 14px;
+    }
+  }
+
+  &__tel {
+    width: 100%;
+    font-weight: 600;
+    font-size: 30px;
+    color: $secondary-color;
+    text-align: center;
+
+    @media (max-width: $bp-tablet) {
+      font-size: 16px;
+    }
+
+    &:focus {
+      outline: none;
+      outline-offset: 8px;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed lightcoral;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-radius: 10px;
+        background-color: lightcoral;
+      }
+    }
+  }
+}
