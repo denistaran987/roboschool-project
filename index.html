@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roboscool</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
@@ -29,6 +30,10 @@
                     <a class="header__nav-list-link" href="#price">Стоимость</a>
                   </li>
                 </ul>
+                <button class="button-close js-button-close" type="button">
+                  <span class="button-close__line"></span>
+                  <span class="button-close__line"></span>
+                </button>
               </nav>
             </div>
             <div class="header__item">
@@ -47,7 +52,7 @@
                 </button>
               </div>
               <div class="burger-menu">
-                <button class="burger-menu__button" type="button">
+                <button class="burger-menu__button js-button-open" type="button">
                   <span class="burger-menu__item"></span>
                 </button>
               </div>
@@ -185,66 +190,59 @@
         </section>
         <section class="coaches section" id="coaches">
           <div class="coaches__container container">
-            <div class="header-block">
+            <div class="coaches__header header-block">
               <h2 class="header-block__title">Профессиональные тренеры</h2>
             </div>
-            <div class="coaches__list">
-              <article class="coaches-card">
-                <a href="#" class="coaches-card__link-image">
-                  <img class="coaches-card__image" src="./images/img_1.jpg" alt="photo Ahmad" />
-                </a>
-                <h3 class="coaches-card__name">Ирина Лайм</h3>
-                <div class="coaches-card__speciality">преподаватель по робототехнике</div>
-                <a href="#" class="coaches-card__link-text"
-                  ><span class="coaches-card__text">Подробнее</span></a
-                >
-              </article>
-              <article class="coaches-card">
-                <a href="#" class="coaches-card__link-image">
-                  <img class="coaches-card__image" src="./images/img_2.jpg" alt="photo Ahmad" />
-                </a>
-                <h3 class="coaches-card__name">Марина Орлова</h3>
-                <div class="coaches-card__speciality">преподаватель по робототехнике</div>
-                <a href="#" class="coaches-card__link-text"
-                  ><span class="coaches-card__text">Подробнее</span></a
-                >
-              </article>
-              <article class="coaches-card">
-                <a href="#" class="coaches-card__link-image">
-                  <img class="coaches-card__image" src="./images/img_3.jpg" alt="photo Ahmad" />
-                </a>
-                <h3 class="coaches-card__name">Максим Петров</h3>
-                <div class="coaches-card__speciality">преподаватель по робототехнике</div>
-                <a href="#" class="coaches-card__link-text"
-                  ><span class="coaches-card__text">Подробнее</span></a
-                >
-              </article>
-              <article class="coaches-card">
-                <a href="#" class="coaches-card__link-image">
-                  <img class="coaches-card__image" src="./images/img_4.jpg" alt="photo Ahmad" />
-                </a>
-                <h3 class="coaches-card__name">Константин Назаров</h3>
-                <div class="coaches-card__speciality">преподаватель по робототехнике</div>
-                <a href="#" class="coaches-card__link-text"
-                  ><span class="coaches-card__text">Подробнее</span></a
-                >
-              </article>
-              <article class="coaches-card">
-                <a href="#" class="coaches-card__link-image">
-                  <img class="coaches-card__image" src="./images/img_5.jpg" alt="photo Ahmad" />
-                </a>
-                <h3 class="coaches-card__name">Лиза Весенняя</h3>
-                <div class="coaches-card__speciality">преподаватель по робототехнике</div>
-                <a href="#" class="coaches-card__link-text"
-                  ><span class="coaches-card__text">Подробнее</span></a
-                >
-              </article>
+            <div class="coaches__swiper swiper">
+              <div class="coaches__list swiper-wrapper">
+                <article class="coaches-card swiper-slide">
+                  <a href="#" class="coaches-card__link-image">
+                    <img class="coaches-card__image" src="./images/img_1.jpg" alt="photo Ahmad" />
+                  </a>
+                  <h3 class="coaches-card__name">Ирина Лайм</h3>
+                  <div class="coaches-card__speciality">преподаватель по робототехнике</div>
+                  <a href="#" class="coaches-card__link-text"><span>Подробнее</span></a>
+                </article>
+                <article class="coaches-card swiper-slide">
+                  <a href="#" class="coaches-card__link-image">
+                    <img class="coaches-card__image" src="./images/img_2.jpg" alt="photo Ahmad" />
+                  </a>
+                  <h3 class="coaches-card__name">Марина Орлова</h3>
+                  <div class="coaches-card__speciality">преподаватель по робототехнике</div>
+                  <a href="#" class="coaches-card__link-text"><span>Подробнее</span></a>
+                </article>
+                <article class="coaches-card swiper-slide">
+                  <a href="#" class="coaches-card__link-image">
+                    <img class="coaches-card__image" src="./images/img_3.jpg" alt="photo Ahmad" />
+                  </a>
+                  <h3 class="coaches-card__name">Максим Петров</h3>
+                  <div class="coaches-card__speciality">преподаватель по робототехнике</div>
+                  <a href="#" class="coaches-card__link-text"><span>Подробнее</span></a>
+                </article>
+                <article class="coaches-card swiper-slide">
+                  <a href="#" class="coaches-card__link-image">
+                    <img class="coaches-card__image" src="./images/img_4.jpg" alt="photo Ahmad" />
+                  </a>
+                  <h3 class="coaches-card__name">Константин Назаров</h3>
+                  <div class="coaches-card__speciality">преподаватель по робототехнике</div>
+                  <a href="#" class="coaches-card__link-text"><span>Подробнее</span></a>
+                </article>
+                <article class="coaches-card swiper-slide">
+                  <a href="#" class="coaches-card__link-image">
+                    <img class="coaches-card__image" src="./images/img_5.jpg" alt="photo Ahmad" />
+                  </a>
+                  <h3 class="coaches-card__name">Лиза Весенняя</h3>
+                  <div class="coaches-card__speciality">преподаватель по робототехнике</div>
+                  <a href="#" class="coaches-card__link-text"><span>Подробнее</span></a>
+                </article>
+              </div>
             </div>
             <div class="coaches__items">
-              <span class="coaches__lines"><span class="coaches__lines-item"></span></span>
+              <div class="coaches__scrollbar swiper-scrollbar"></div>
               <div class="coaches__button-container">
-                <button class="carousel-button">
+                <button class="coaches__button carousel-button carousel-button--prev">
                   <svg
+                    class="coaches__button-icon"
                     width="34"
                     height="34"
                     viewBox="0 0 34 34"
@@ -257,8 +255,9 @@
                     />
                   </svg>
                 </button>
-                <button class="carousel-button">
+                <button class="coaches__button carousel-button carousel-button--next">
                   <svg
+                    class="coaches__button-icon"
                     width="34"
                     height="34"
                     viewBox="0 0 34 34"
@@ -367,5 +366,8 @@
         </div>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/js/swiper.js"></script>
+    <script src="/js/burger.js"></script>
   </body>
 </html>

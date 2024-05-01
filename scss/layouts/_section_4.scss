@@ -1,17 +1,24 @@
 .coaches {
+  &__swiper {
+    max-width: 100%;
+  }
+
   &__container {
     display: grid;
     gap: 60px;
+
+    @media (max-width: $bp-tablet) {
+      gap: 40px;
+    }
   }
 
   &__list {
     display: flex;
     align-items: center;
-    gap: 40px;
-    overflow: hidden;
   }
 
   &__items {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,23 +26,26 @@
   }
 
   &__button-container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 14px;
+
+    @media (max-width: $bp-tablet) {
+      display: none;
+    }
   }
 
-  &__lines,
-  &__lines-item {
+  &__scrollbar {
     border-radius: 40px;
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     height: 5px;
     background-color: rgba(20, 16, 36, 0.08);
-  }
 
-  &__lines-item {
-    display: block;
-    width: 260px;
-    background-color: $primary-color;
+    @media (max-width: $bp-tablet) {
+      max-width: none;
+    }
   }
 }
