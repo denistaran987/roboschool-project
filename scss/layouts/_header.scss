@@ -90,7 +90,6 @@
 
     &:focus {
       outline: none;
-      color: lightcoral;
     }
 
     &:focus-visible {
@@ -112,11 +111,6 @@
     font-size: 30px;
     color: $secondary-color;
     transition: color 0.3s ease-in-out;
-
-    &:focus {
-      outline: none;
-      color: lightcoral;
-    }
 
     &:focus-visible {
       outline: 2px dashed lightcoral;

@@ -1,4 +1,9 @@
 .advantages {
+  @media (max-width: $bp-mobile) {
+    padding: 46px 0;
+    margin: 30px 0;
+  }
+
   background-color: #f9f9f9;
   &__items {
     display: grid;

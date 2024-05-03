@@ -1,4 +1,4 @@
-const swiper = new Swiper(".swiper", {
+const mainSwiper = new Swiper(".swiper", {
   loop: true,
   slidesPerView: 1,
   spaceBetween: 40,
@@ -16,7 +16,6 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".carousel-button--prev",
   },
 
-  // And if we need scrollbar
   scrollbar: {
     el: ".swiper-scrollbar",
   },

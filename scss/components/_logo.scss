@@ -6,13 +6,9 @@
   &__link {
     max-width: 228px;
 
-    &:focus {
-      outline: none;
-    }
-
     &:focus-visible {
-      outline: 2px dashed #fff;
-      outline-offset: 6px;
+      outline: 2px dashed lightcoral;
+      outline-offset: 10px;
     }
   }
 

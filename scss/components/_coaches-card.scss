@@ -39,6 +39,7 @@
   &__link-text {
     color: #d52027;
     max-width: 93px;
+    cursor: pointer;
 
     @media (hover: hover) {
       &:hover {

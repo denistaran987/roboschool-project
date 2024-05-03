@@ -1,0 +1,95 @@
+.services-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  max-width: 360px;
+  height: auto;
+  border-radius: 20px;
+  border: 1px solid rgba(20, 16, 36, 0.2);
+  transform-style: preserve-3d;
+  transition: transform 0.5s, background-color 0.5s;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      transform: perspective(1000px) rotateY(20deg);
+      background-color: $primary-color;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover > * {
+      color: $secondary-color;
+    }
+  }
+
+  @media (max-width: $bp-tablet) {
+    max-width: 340px;
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding: 40px 20px;
+  }
+
+  &__title,
+  &__price,
+  &__text {
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    color: $primary-color;
+  }
+
+  &__title {
+    margin-bottom: 80px;
+
+    @media (max-width: $bp-mobile) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__price {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 18px;
+    margin-bottom: 50px;
+
+    @media (max-width: $bp-mobile) {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text--modifier {
+    text-transform: uppercase;
+  }
+
+  &__button {
+    padding: 25px 54px;
+    width: 280px;
+    height: 79px;
+    transition: box-shadow 0.08s;
+
+    @media (max-width: $bp-mobile) {
+      padding: 18px 54px;
+      width: 260px;
+      height: 60px;
+      font-size: 16px;
+      text-align: center;
+      color: $secondary-color;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed lightcoral;
+      outline-offset: 8px;
+    }
+
+    &:active {
+      box-shadow: 0 0 2px 2px $secondary-color;
+    }
+  }
+}
