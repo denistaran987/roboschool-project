@@ -30,14 +30,16 @@
   &__line {
     border: 2.11px solid $secondary-color;
     width: 17px;
-    rotate: 45deg;
     position: absolute;
     top: 50%;
     left: 50%;
-    translate: -50% -50%;
+
+    &:first-child {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
 
     &:last-child {
-      rotate: -45deg;
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
 
@@ -85,12 +87,10 @@
   }
 
   &::before {
-    transform: translate(3px, 7px);
-    rotate: 130deg;
+    transform: translate(-7px, 0px) rotate(-50deg);
   }
 
   &::after {
-    transform: translate(-3px, 7px);
-    rotate: -130deg;
+    transform: translate(7px) rotate(50deg);
   }
 }

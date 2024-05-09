@@ -58,14 +58,14 @@
     font-size: 18px;
     margin-bottom: 50px;
 
+    &-modifier {
+      text-transform: uppercase;
+    }
+
     @media (max-width: $bp-mobile) {
       font-size: 16px;
       margin-bottom: 40px;
     }
-  }
-
-  &__text--modifier {
-    text-transform: uppercase;
   }
 
   &__button {
