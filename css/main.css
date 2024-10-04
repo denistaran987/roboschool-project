@@ -306,6 +306,12 @@ select {
       -ms-transform: translate(7px) rotate(50deg);
           transform: translate(7px) rotate(50deg);
 }
+@media (max-width: 1280px) {
+  .button-up {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 
 .carousel-button {
   display: -webkit-box;
@@ -382,12 +388,15 @@ select {
 }
 .coaches-card__link-text {
   color: #d52027;
+  opacity: 0.7;
   max-width: 93px;
   cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 @media (hover: hover) {
   .coaches-card__link-text:hover {
-    opacity: 0.6;
+    opacity: 1;
   }
 }
 @media (max-width: 768px) {
@@ -903,8 +912,11 @@ select {
   width: 100%;
   font-weight: 600;
   font-size: 30px;
+  border-radius: 10px;
   color: #fff;
   text-align: center;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 @media (max-width: 768px) {
   .footer__tel {
@@ -920,7 +932,6 @@ select {
 }
 @media (any-hover: hover) {
   .footer__tel:hover {
-    border-radius: 10px;
     background-color: lightcoral;
   }
 }
@@ -1044,6 +1055,9 @@ select {
 }
 .header__nav-list-link {
   padding: 6px 8px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  border-radius: 10px;
 }
 .header__nav-list-link:focus {
   outline: none;
@@ -1053,7 +1067,6 @@ select {
 }
 @media (any-hover: hover) {
   .header__nav-list-link:hover {
-    border-radius: 10px;
     background-color: lightcoral;
   }
 }
@@ -1062,16 +1075,16 @@ select {
   text-align: center;
   font-weight: 600;
   font-size: 30px;
+  border-radius: 10px;
   color: #fff;
-  -webkit-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .header__tel:focus-visible {
   outline: 2px dashed lightcoral;
 }
 @media (any-hover: hover) {
   .header__tel:hover {
-    border-radius: 10px;
     background-color: lightcoral;
   }
 }
@@ -1630,11 +1643,12 @@ select {
   max-width: 500px;
   height: 64px;
   background-color: #141024;
+  background-size: 200% auto;
   text-align: center;
   color: #fff;
   cursor: pointer;
-  -webkit-transition: background-image 0.5s;
-  transition: background-image 0.5s;
+  -webkit-transition: background-position 1s;
+  transition: background-position 1s;
 }
 @media (max-width: 768px) {
   .discount__button {
@@ -1649,9 +1663,12 @@ select {
 }
 @media (any-hover: hover) {
   .discount__button:hover {
+    background-position: right center;
     background-image: -webkit-gradient(linear, left top, right top, from(red), to(pink));
     background-image: linear-gradient(to right, red, pink);
     color: #141024;
+    -webkit-transition: background-position 1s;
+    transition: background-position 1s;
   }
 }
 .discount__button:active {

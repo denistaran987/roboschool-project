@@ -80,7 +80,7 @@
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 24px;
     border: 2px solid $primary-color;
@@ -92,5 +92,10 @@
 
   &::after {
     transform: translate(7px) rotate(50deg);
+  }
+
+  @media (max-width: $bp-desktop) {
+    opacity: 0;
+    visibility: hidden;
   }
 }

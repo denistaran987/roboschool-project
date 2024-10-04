@@ -75,10 +75,11 @@
     max-width: 500px;
     height: 64px;
     background-color: $primary-color;
+    background-size: 200% auto;
     text-align: center;
     color: $secondary-color;
     cursor: pointer;
-    transition: background-image 0.5s;
+    transition: background-position 1s;
 
     @media (max-width: $bp-tablet) {
       max-width: none;
@@ -93,8 +94,10 @@
 
     @media (any-hover: hover) {
       &:hover {
+        background-position: right center;
         background-image: linear-gradient(to right, red, pink);
         color: $primary-color;
+        transition: background-position 1s;
       }
     }
 

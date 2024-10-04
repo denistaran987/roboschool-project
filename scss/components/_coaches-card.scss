@@ -38,12 +38,14 @@
 
   &__link-text {
     color: #d52027;
+    opacity: 0.7;
     max-width: 93px;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
 
     @media (hover: hover) {
       &:hover {
-        opacity: 0.6;
+        opacity: 1;
       }
     }
 

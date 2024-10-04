@@ -56,8 +56,10 @@
     width: 100%;
     font-weight: 600;
     font-size: 30px;
+    border-radius: 10px;
     color: $secondary-color;
     text-align: center;
+    transition: 0.3s ease-in-out;
 
     @media (max-width: $bp-tablet) {
       font-size: 16px;
@@ -74,7 +76,6 @@
 
     @media (any-hover: hover) {
       &:hover {
-        border-radius: 10px;
         background-color: lightcoral;
       }
     }
